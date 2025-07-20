@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="vendor/bootstrap-5.0.2/css/bootstrap.min.css">
     <script src="vendor/bootstrap-5.0.2/js/bootstrap.min.js"></script>
     <script src="vendor/jquery-3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <link href="vendor/dataTable-1.13.6/datatables.min.css" rel="stylesheet">
     <link rel="stylesheet" href="vendor/fontawesome-free-6.5.2-web/css/all.min.css"/>
     <link rel="stylesheet" href="css/custom.css">
@@ -260,7 +261,9 @@
                 <div class="resume-desc ps-3 mt-2">
                     <h5>S. O. Casido, J. C. Ballaho and E. I. Arip, "Tree-Based Machine Learning Models for Phishing Email Detection,"</h5>
                     <p>Presented March 26, 2025 | Published July 2, 2025</p>
-                    <p class="mb-5">2025 12th International Conference on Information Technology (ICIT), Amman, Jordan, 2025, pp. 381-386, doi: 10.1109/ICIT64950.2025.11049191.</p>                    
+                    <p class="mb-5">2025 12th International Conference on Information Technology (ICIT), Amman, Jordan, 2025, pp. 381-386, doi: 10.1109/ICIT64950.2025.11049191.
+                        <br><br><a href="https://ieeexplore.ieee.org/document/11049191" class="link">View on IEEE →</a>
+                    </p>                    
                 </div>
 
                 <h5 style="margin-top: 28%;">HTML/CSS/JS</h5>
@@ -340,48 +343,50 @@
 
     <section id="contact">
         <div class="row">
-            <div class="col">
-                <h2 class="pt-5">Let's get in touch</h2>
+            <div class="col container">
+                <h2>Let's get in touch</h2>
                 <h5>Discuss your ideas with me and I'll try my best to bring it to reality through my UI design.</h5>
-                <h4 class="pt-5">Living In:</h4>
+                <h4 class="pt-5">Living In</h4>
                 <p>San Roque, Zamboanga City, Philippines</p>
-                <h4>Email</h4>
-                <p>qb202100057@wmsu.edu.ph</p>
-                <div class="pt-2 pb-5">
-                    <a href="www.facebook.com/sunshne.casido" class="fa-brands fa-facebook-f fa-2x pe-2" style="
-                    color: var(--clr-1); text-decoration: none; overflow: hidden;"></a>
-                    <a href="github.com/xscpry" class="fa-brands fa-github fa-2x ps-2" style="
-                    color: var(--clr-1); text-decoration: none; overflow: hidden;"></a>
+                <h4 class="pt-3">Email</h4>
+                <p>sunshinecasido1@gmail.com</p>
+                <h4 class="pt-3">Socials</h4>
+                <div class="footer-links pt-2 pb-5">
+                    <a href="https://www.facebook.com/sunshne.casido" class="fa-brands fa-facebook-f fa-2x"></a>
+                    <a href="https://github.com/xscpry" class="fa-brands fa-github fa-2x"></a>
+                    <a href="https://www.linkedin.com/in/sunshine-casido-a83528310/" class="fa-brands fa-linkedin fa-2x"></a>
                 </div>
             </div>
-            <div class="col">
-                <h2 class="pt-5">What's your project?</h2>
-                <form id="contact-form" method="POST" class="form-border">
-                    <div class="row">
-                        <div class="col">
-                            <label for="name" class="form-label">Your name:</label>
-                            <input type="text" name="name" id="name" class="form-control py-1" required>
-                        </div>
-                        <div class="col">
-                            <label for="email" class="form-label">Your email address:</label>
-                            <input type="email" name="email" id="email" class="form-control py-1" required>
-                        </div>
-                        <div class="col">
-                            <label for="form-message" class="form-label">Your message:</label>
-                            <textarea name="message" id="form-message" class="form-control py-1" rows="4" required></textarea>
-                        </div>
-                        <div class="col">
-                            <div class="homeBtn pt-3" type="submit" id="submit-btn-1">
-                                <a class="btn px-3 py-2">Send 
-                                    <span class="ms-3">
-                                        <i class="fas fa-arrow-right">
-                                        </i>
-                                    </span>
-                                </a>
+            <div class="col container">
+                <div class="card">
+                    <h2 class="mb-4" style="font-weight: semibold;">What's your project?</h2>
+                    <form id="contact-form" method="POST">
+                        <div class="row">
+                            <div class="col">
+                                <label for="name" class="form-label">Your name:</label>
+                                <input type="text" name="name" id="name" class="form-control py-1" required>
+                            </div>
+                            <div class="col">
+                                <label for="email" class="form-label">Your email address:</label>
+                                <input type="email" name="email" id="email" class="form-control py-1" required>
+                            </div>
+                            <div class="col">
+                                <label for="form-message" class="form-label">Your message:</label>
+                                <textarea name="message" id="form-message" class="form-control py-1" rows="4" required></textarea>
+                            </div>
+                            <div class="col">
+                                <div class="homeBtn pt-3" type="submit" id="submit-btn-1">
+                                    <a class="downloadcv-btn px-3 py-2">Send 
+                                        <span class="ms-3">
+                                            <i class="fas fa-arrow-right">
+                                            </i>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -392,50 +397,7 @@
         </div>
     </footer>
 
-
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('.navbar-nav .nav-link').on('click', function(){
-            $('.navbar-nav .nav-link').removeClass('active');
-            $(this).addClass('active');
-        });
-    });
-    </script>
-    <script type="text/javascript">
-        (function () {
-          emailjs.init("TLlAAFKQ_uAFf7a78");
-        })();
-    </script>
-    
-    <script type="text/javascript">
-    function sendEmail() {
-        const templateParams = {
-        to_email: "qb202100057@wmsu.edu.ph",
-        from_email: $('#email').val(),
-        from_name: $('#name').val(),
-        message: $('#message').val(),
-        };
-        $('#submit-btn-1').prop('disabled', true);
-        emailjs.send("service_0iehclc", "template_woen6io", templateParams)
-        .then((response) => {
-            console.log("Email sent:", response);
-            $('#submit-btn-1').prop('disabled', false);
-            $('#email').val('');
-            $('#name').val('');
-            $('#message').val('')
-        }, (error) => {
-            console.log("Error sending email:", error);
-        });
-    }
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('form#contact-form').submit(function(e){
-            e.preventDefault();
-            sendEmail();
-            })
-        });
-    </script>
-    
+    <script src="js/index.js"></script>
+    <script src="js/email.js"></script>
 </body>
 </html>
