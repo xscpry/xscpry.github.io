@@ -4,44 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunshine - Personal Portfolio</title>
-    <link rel="stylesheet" href="./vendor/bootstrap-5.0.2/css/bootstrap.min.css">
-    <script src="./vendor/bootstrap-5.0.2/js/bootstrap.min.js"></script>
-    <link href="./vendor/dataTable-1.13.6/datatables.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./vendor/fontawesome-free-6.5.2-web/css/all.min.css"/>
-    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="vendor/bootstrap-5.0.2/css/bootstrap.min.css">
+    <script src="vendor/bootstrap-5.0.2/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery-3.7.1/jquery.min.js"></script>
+    <link href="vendor/dataTable-1.13.6/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/fontawesome-free-6.5.2-web/css/all.min.css"/>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    
     <div id="intro">
         <div class="profile-pic pt-5">
-            <img src="./img/442649509_975890263780631_183620361781952221_n.jpg" alt="Sunshine's profile pic" width="300">
+            <img src="./img/grad pic.jpg" alt="Sunshine's profile pic" width="300">
         </div>
-        <h1>HELLO! I'M SUNSHINE - UI DESIGNER AND WEB DEVELOPING ENTHUSIAST.</h1>
+        <h1 class="mt-4">HELLO! I'M SUNSHINE - WEB DEVELOPMENT ENTHUSIAST</h1>
         <p>based in Zamboanga City, Philippines.</p>
         <div class="homeBtn pt-3">
-            <a class="btn px-3 py-2" href="#aboutme">About Me</a>
+            <a class="downloadcv-btn px-3 py-2" href="#aboutme">About Me</a>
         </div>
     </div>
-    <section id="aboutme" class="py-5 px-5">
-        <p id="section-name">About Me</p>
-        <h1>Who I am</h1>
-        <div class="row">
-            <div class="col">
-                <h2>Hi, I'm Sunshine Casido</h2>
-                <p>I'm a passionate, detail-oriented, and hard-working UI Web Designer equipped with communication skills, project management skills, and programming knowledge; dedicated to mastering Web Development, Software Engineering and Data Science and Analysis.</p>        
+    <section id="aboutme">
+        <p class="section-name">About Me</p>
+        <h1 class="mt-2 section-underline">Who I am</h1>
+        <div class="row mt-4 px-5">
+            <div class="col" style="padding-left: 4em;">
+                <h2 class="mb-4">Hi, I'm Sunshine Casido.</h2>
+                <p>A passionate and research-driven Computer Science graduate from Western Mindanao State University, with strong foundations in web development, machine learning, and software engineering.</p>        
+                <p> Equipped with technical expertise in programming, database management, and project coordination, I thrive in dynamic environments that demand problem-solving and continuous learning.</p>
+                <p>Eager to leverage my communication skills and technical knowledge to excel as a web developer, while expanding my proficiency in Software Engineering and Data Science.</p>
+                
+                <div class="homeBtn pt-3">
+                    <a class="downloadcv-btn px-3 py-2" href="#resume">View Resume</a>
+                </div>
             </div>
             <div class="col" style="display: flex; align-items: center; justify-content: center; align-content: center;">
-                <img src="./img/images (1).jpg" alt="WMSU CCS Logo" width="150">
-                <h3 class="py-4">BS in Computer Science from WMSU</h3>
+                <img src="./img/gradpic.jpg" alt="Grad Pic" width="500" class="gradpic">
+                <h4 class="py-4">Bachelor of Science in Computer Science</h4>
             </div>
         </div>
     </section>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#intro">Home</a>
+                        <a class="nav-link" aria-current="page" href="#intro">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#aboutme">About</a>
@@ -64,54 +76,172 @@
     </nav>
 
     <section id="services">
-        <p id="section-name">What I Do?</p>
-        <h1>How I can help your company</h1>
-        <div class="row">
-            <div class="col px-5">
-                <div class="my-5" style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;">
-                    <i class="fa-solid fa-palette fa-6x" class="icons" style="
-                    color: var(--clr-5);"></i>
+        <p class="section-name">What I Do?</p>
+        <h1 class="section-underline">How I can help your company</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col px-5 mx-2">
+                    <div class="mt-5 mb-3" style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;">
+                        <i class="fa-brands fa-figma fa-6x" class="icons" style="
+                        color: var(--clr-5);"></i>
+                    </div>
+                    
+                    <h5 style="font-weight: bold;">UI Design & Prototyping</h5>
+                    <p>I create intuitive interfaces using Figma and Google Sites, balancing usability with visual appeal.</p>
                 </div>
-                
-                <h5 style="font-weight: bold;">UI Website Design</h5>
-                <p>I have experience in designing for websites that I have developed in the past few years either for prototypes or deployment.</p>
+                <div class="col px-5 mx-2">
+                    <div class="mt-5 mb-3" style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;">
+                        <i class="fa-solid fa-database fa-6x" class="icons" style="
+                        color: var(--clr-5);"></i>
+                    </div>
+                    <h5 style="font-weight: bold;">Back-end Development</h5>
+                    <p>I architect scalable databases (MySQL) and server-side logic for web apps. For my thesis project, I integrated Gmail APIs and engineered features for email analysis, ensuring seamless data flow between front-end and back-end systems.</p>
+                </div>
             </div>
-            <div class="col px-5">
-                <div class="my-5" style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;">
-                    <i class="fa-solid fa-laptop-code fa-6x" class="icons" style="
-                    color: var(--clr-5);"></i>
+            <div class="row">
+                <div class="col px-5 mx-2">
+                    <div class="mt-5 mb-3" style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;">
+                        <i class="fa-solid fa-gear fa-6x" class="icons" style="
+                        color: var(--clr-5);"></i>
+                    </div>
+                    <h5 style="font-weight: bold;">Machine Learning and Data Science</h5>
+                    <p>I develop predictive models using Python (Pandas, Scikit-Learn, PyTorch) and optimize them for real-world applications. My thesis on phishing email detection achieved 98.7% accuracy with Random Forest.</p>
                 </div>
-                <h5 style="font-weight: bold;">Backend Development</h5>
-                <p>I have experience with MySQL for the database integration in the backend development of the web application.</p>
+                <div class="col px-5 mx-2">
+                    <div class="mt-5 mb-3" style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;">
+                        <i class="fa-solid fa-code fa-6x" class="icons" style="
+                        color: var(--clr-5);"></i>
+                    </div>
+                    
+                    <h5 style="font-weight: bold;">Full-Stack Web Development</h5>
+                    <p>I design and build responsive websites from concept to deployment, combining front-end aesthetics with back-end functionality.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col px-5 mx-2">
+                    <div class="mt-5 mb-3" style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;">
+                        <i class="fa-solid fa-list-check fa-6x" class="icons" style="
+                        color: var(--clr-5);"></i>
+                    </div>
+                    <h5 style="font-weight: bold;">Project Management</h5>
+                    <p>I coordinate cross-functional teams using Agile tools (Trello, monday.com). As project manager for the ZICT Events System, I handled task delegation and deadlines while designing the UI.</p>
+                </div>
+                <div class="col px-5 mx-2">
+                    <div class="mt-5 mb-3" style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;">
+                        <i class="fa-solid fa-book-atlas fa-6x" class="icons" style="
+                        color: var(--clr-5);"></i>
+                    </div>
+                    
+                    <h5 style="font-weight: bold;">Research & Publication</h5>
+                    <p>I translate technical concepts into accessible insights. My published work on phishing detection at ICIT 2025 demonstrates my ability to bridge academic research and practical applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="techstack">
+        <h1 class="section-underline">My Tech Stack</h1>
+        <p class="mt-2">Technologies I've been working with recently</p>
+        <div class="container-techstack">
+            <div class="row">
+                <div class="col">
+                    <div class="techstack mt-5">
+                        <h3>Programming Languages</h3>
+                        <i class="fab fa-php" title="PHP"></i>  
+                        <i class="fab fa-python" title="Python"></i>  
+                        <i class="fab fa-js" title="JavaScript"></i>  
+                        <i class="fab fa-html5" title="HTML5"></i>  
+                        <i class="fab fa-css3-alt" title="CSS3"></i>  
+                        <i class="fa-brands fa-bootstrap" title="Bootstrap"></i>
+                        <i class="fas fa-wind text-cyan-500" title="Tailwind CSS"></i>
+                        <i class="fas fa-database" title="SQL"></i>  
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="techstack mt-5">
+                        <h3>Frameworks & Libraries</h3>
+                        <i class="fas fa-project-diagram" title="Scikit-Learn"></i>  
+                        <i class="fas fa-brain" title="PyTorch"></i>  
+                        <i class="fas fa-chart-line" title="Pandas/Numpy"></i>  
+                        <i class="fas fa-network-wired" title="TensorFlow"></i>  
+                    </div>
+                </div>
+            </div><div class="row">
+                <div class="col">
+                    <div class="techstack mt-5">
+                        <h3>Tools & Platforms</h3>
+                        <i class="fab fa-figma" title="Figma"></i>  
+                        <i class="fab fa-trello" title="Trello"></i>  
+                        <i class="fas fa-code" title="VS Code"></i>  
+                        <i class="fas fa-laptop-code" title="Jupyter Notebook"></i>  
+                        <i class="fas fa-server" title="Hostinger"></i>  
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="techstack mt-5">
+                        <h3>Project Management</h3>
+                        <i class="fas fa-tasks" title="Monday.com"></i>  
+                        <i class="fas fa-sticky-note" title="Notion"></i>   
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="techstack mt-5">
+                        <h3>Full-Stack Development</h3>
+                        <i class="fas fa-code-branch" title="Git/GitHub"></i>  
+                        <i class="fab fa-google" title="Google APIs"></i>  
+                        <i class="fas fa-shield-alt" title="Security"></i>   
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="resume">
-        <p id="section-name">Resume</p>
-        <h1>A summary of my resume</h1>
-
+        <p class="section-name">Resume</p>
+        <h1 class="section-underline">A summary of my resume</h1>
         <div class="row py-5">
             <div class="col px-5">
                 <h3>My Education</h3>
                 <div class="resume-desc ps-3 mt-2">
                     <h5>Bachelor of Science in Computer Science</h5>
-                    <p>Western Mindanao State University / 2021 - 2025</p>
+                    <p>Western Mindanao State University | 2021 - 2025</p>
                     <p class="mb-5">Thesis: Defending the Inbox: A Prevention Application for Deterring Email-Based Attacks</p>
 
-                    
-                    <h5>Science, Technology, Engineering, and Mathematics</h5>
-                    <p>Baliwasan Senior High School – Stand-Alone / 2021</p>
+                    <h5>Science, Technology, Engineering, and Mathematics Strand</h5>
+                    <p>Baliwasan Senior High School – Stand-Alone | 2019-2021</p>
                     <p class="mb-5">with Honors (Ave: 93%)</p>
+
+                    <h5>Science, Technology, Engineering, and Mathematics (STEM Program)</h5>
+                    <p>Zamboanga National High School West | 2015-2019</p>
+                    <p class="mb-5">with Honors (Ave: 92%)</p>
                 </div>
+
                 <h3 class="mt-5">My Skills</h3>
                 <h5 class="my-3">Web Development</h5>
                 <div class="progress">
@@ -134,8 +264,14 @@
                     <p>October 2021 - February 2022</p>
                     <p class="mb-5">Input INC members information into their software application.</p>                    
                 </div>
-                
-                <h5 style="margin-top: 50%;">HTML/CSS/JS</h5>
+                <h3 class="mt-5">Publication</h3>
+                <div class="resume-desc ps-3 mt-2">
+                    <h5>S. O. Casido, J. C. Ballaho and E. I. Arip, "Tree-Based Machine Learning Models for Phishing Email Detection,"</h5>
+                    <p>Presented March 26, 2025 | Published July 2, 2025</p>
+                    <p class="mb-5">2025 12th International Conference on Information Technology (ICIT), Amman, Jordan, 2025, pp. 381-386, doi: 10.1109/ICIT64950.2025.11049191.</p>                    
+                </div>
+
+                <h5 style="margin-top: 28%;">HTML/CSS/JS</h5>
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
                 </div>
@@ -147,67 +283,73 @@
         </div>
 
         <div class="homeBtn pt-3">
-            <a class="btn px-3 py-2" href="./misc/Sunshine Casido CV.pdf" download>Download CV</a>
+            <a class="downloadcv-btn px-3 py-2" href="./misc/SUNSHINE CASIDO - RESUME.pdf" download>Download CV</a>
         </div>
     </section>
 
     <section id="portfolio">
-        <p id="section-name">Portfolio</p>
-        <h1>My most recent projects</h1>
-        <div class="row mt-5">
-            <div class="col">
-                <div class="projects mt-5">
-                    <img src="./img/inboxguard-homepage.png" width="550">
-                    <div class="project-desc mt-2 py-2">
-                        <h4>Thesis: InboxGuard Email Protection System</h4>
-                        <p>Fullstack Web Development</p>
-                    </div>
-                </div>
-                <div class="projects mt-5">
-                    <img src="./img/bscstour2024.png" width="550">
-                    <div class="project-desc mt-2 py-2">
-                        <h4>BSCS Tour 2024 Web Blog</h4>
-                        <p>UI Design Prototype</p>
-                    </div>
-                </div>
-                <div class="projects mt-5">
-                    <img src="./img/342216516_1358403715030553_6867528831330819189_n.png" width="550">
-                    <div class="project-desc mt-2 py-2">
-                        <h4>Skytropics Beach Resort Website</h4>
-                        <p>Fullstack Web Development</p>
-                    </div>
-                </div>
+        <p class="section-name">Portfolio</p>
+        <h1 class="section-underline">My most recent projects</h1>
+        <div class="demo mt-3 mb-5">
+            <div class="youtube-embed">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YY7FadeNmBU?si=5oaG3nBCg2AELf64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <div class="col ms-5">
-                <div class="projects mt-5">
-                    <img src="./img/purrpaws.png" width="550">
-                    <div class="project-desc mt-2 py-2">
-                        <h4>Purrpaws Veterinary Clinic Website</h4>
-                        <p>Fullstack Web Development</p>
+            <div class="project-description">
+            <h4>A Video Demo on My Thesis Project</h4>
+            <p>InboxGuard represents a comprehensive email security solution, combining full-stack web development with integrated machine learning capabilities.</p>
+            <a href="inboxguard.xscpry.com" class="project-link">View Website →</a>
+            </div>
+        </div>
+        <div class="portfolio">
+            <div class="row mt-2">
+                <div class="col">
+                    <div class="projects">
+                        <img src="./img/bscstour2024.png" width="550">
+                        <div class="project-desc mt-2 py-2">
+                            <h4>BSCS Tour 2024 Web Blog</h4>
+                            <p>UI Design Prototype | <a href="https://sites.google.com/view/bscsmnl2024"> LINK</a></p>
+                        </div>
+                    </div>
+                    <div class="projects mt-5">
+                        <img src="./img/342216516_1358403715030553_6867528831330819189_n.png" width="550">
+                        <div class="project-desc mt-2 py-2">
+                            <h4>Skytropics Beach Resort Website</h4>
+                            <p>Fullstack Web Development</p>
+                        </div>
                     </div>
                 </div>
-                <div class="projects mt-5">
-                    <img src="./img/se.png" width="550">
-                    <div class="project-desc mt-2 py-2">
-                        <h4>ZICT Web-Based Events Management System</h4>
-                        <p>Software Engineering</p>
+                <div class="col">
+                    <div class="projects">
+                        <img src="./img/purrpaws.png" width="550">
+                        <div class="project-desc mt-2 py-2">
+                            <h4>Purrpaws Veterinary Clinic Website</h4>
+                            <p>Fullstack Web Development</p>
+                        </div>
+                    </div>
+                    <div class="projects mt-5">
+                        <img src="./img/se.png" width="550">
+                        <div class="project-desc mt-2 py-2">
+                            <h4>ZICT Web-Based Events Management System</h4>
+                            <p>Software Engineering | <a href="https://zict.xscpry.com/"> LINK</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </section>
 
-    <div class="hire-me">
+    <div class="hire-me" id="hire-me">
         <h1>Interested in working with me?</h1>
         <div class="homeBtn pt-5">
-            <a class="btn px-3 py-2" href="#contact">Hire Me!</a>
+            <a class="downloadcv-btn px-3 py-2" href="#contact">Hire Me!</a>
         </div>
     </div>
 
     <section id="contact">
         <div class="row">
             <div class="col">
-                <h1 class="pt-5">Let's get in touch</h1>
+                <h2 class="pt-5">Let's get in touch</h2>
                 <h5>Discuss your ideas with me and I'll try my best to bring it to reality through my UI design.</h5>
                 <h4 class="pt-5">Living In:</h4>
                 <p>San Roque, Zamboanga City, Philippines</p>
@@ -221,7 +363,7 @@
                 </div>
             </div>
             <div class="col">
-                <h1 class="pt-5">What's your project?</h1>
+                <h2 class="pt-5">What's your project?</h2>
                 <form id="contact-form" method="POST" class="form-border">
                     <div class="row">
                         <div class="col">
@@ -254,13 +396,18 @@
 
     <footer>
         <div class="footer">
-            <p>Copyright © 2023 <a href="#intro">Sunshine</a>. All Rights Reserved.</p>
+            <p class="mt-3">Copyright © 2023 <a href="#intro">Sunshine</a>. All Rights Reserved.</p>
         </div>
     </footer>
 
 
-    
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.navbar-nav .nav-link').on('click', function(){
+            $('.navbar-nav .nav-link').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
     </script>
     <script type="text/javascript">
         (function () {
@@ -297,5 +444,6 @@
             })
         });
     </script>
+    
 </body>
 </html>

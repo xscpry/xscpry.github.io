@@ -3,8 +3,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Inter var,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .nav{padding: 0em;}
@@ -14,27 +17,49 @@
     --clr-2: #1c285a;
     --clr-3: #FFCBCB;
     --clr-4: #102C57;
-    --clr-5: #1679AB;
+    --clr-5: #0A5EB0;
 }
 
 .nav-link {
+    color: #000;
     position: relative;
+}
+.nav-link:hover {
+    color: var(--clr-2);
+    text-decoration: none;
 }
 .nav-link.active {
     text-decoration: underline;
 }
 .navbar {
-    background-color: var(--clr-1);
     justify-content: center;
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1030;
-    background-color: var(--clr-3);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+    width: 90%;  
+}
+
+.navbar-nav {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutme, #services, #resume, #portfolio, #contact {
+  scroll-margin-top: 3rem;
 }
 
 #intro {
-    background-image: url('../img/bg-image.png');
+    background-image: url('../img/hero3.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -47,10 +72,14 @@
     color: var(--clr-1);
 }
 
+.gradpic {
+    border-radius: .2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
 
 .profile-pic img {
     border-radius: 100%;
-    border: .8rem solid var(--clr-1);
+    border: .6rem solid var(--clr-1);
 }
 
 .homeBtn {
@@ -58,26 +87,86 @@
 }
 
 .btn {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.downloadcv-btn {
+    background-color: var(--clr-2);
+    color: var(--clr-1);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    box-shadow: 2px 4px 0 2px var(--clr-3);
+}
+
+.downloadcv-btn:hover {
     background-color: var(--clr-5);
     color: var(--clr-1);
 }
 
+.section-underline {
+  text-decoration: none; 
+  position: relative;
+  display: inline;
+  z-index: 0;
+}
+
+.section-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.4rem; 
+  width: 100%;
+  height: 0.5rem;
+  background: var(--clr-3);
+  z-index: -1;
+}
+
+
 #aboutme {
+    background-image: url('../img/stacked-waves-haikei1.svg');
+    background-size: cover;
     margin: 60px 0 60px 0;
     display: flex;
     flex-direction: column;
     align-items: center;    
     align-content: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
-#aboutme h1 {
+#techstack {
+    margin: 60px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    align-content: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+#techstack .row {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.container-techstack i {
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+h1 {
     text-align: center;
     font-weight: bold;
 }
 
 #aboutme p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -95,31 +184,41 @@
 }
 
 
-#section-name {
-    font-size: 1rem;
+.section-name {
+    font-size: 1.25rem;
     background-color: var(--clr-4);
     color: var(--clr-1);
+    display: inline-block;
+    padding: 0.25em 1em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.section-name .row {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
 }
 
 #services {
-    margin: 60px 0 60px 0;
+    margin: 4rem;
     display: flex;
     flex-direction: column;
+    align-items: center;    
     align-content: center;
     justify-content: center;
-    text-align: center;
-    overflow: hidden;
 }
+
 
 #services .row {
     display: flex;
     flex-direction: row;
+    text-align: center;
 }
 
 #services .col {
     display: flex;
     flex-direction: column;
-    align-items: center; 
 }
 
 #services #section-name p {
@@ -130,7 +229,7 @@
 
 
 #resume {
-    margin: 60px 0 60px 0;
+    margin: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -158,10 +257,14 @@
     border-left: solid 2px var(--clr-5);
 }
 
-
+.portfolio {
+    width: 100%;
+    padding: 4rem;
+    background-image: url('../img/stacked-waves-haikei2.svg');
+    background-size: cover;
+}
 
 #portfolio{
-    margin: 60px 0 60px 0;
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -185,16 +288,61 @@
     flex-direction: column;
 }
 
+.projects {
+    padding: 2rem 2rem 0 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.demo {
+  width: 50%;
+}
+
+.youtube-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+
+.youtube-embed iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: .5rem;
+  color: #3182ce;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-link:hover {
+  color: #2c5282;
+  text-decoration: underline;
+}
+
 .hire-me {
     height: 80vh;
-    margin: 60px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;    
     align-content: center;
     justify-content: center;
-    color: black;
-    background-color: var(--clr-3);
+    color: var(--clr-2);
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%23ffcbcb' fill-opacity='0.91' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 
