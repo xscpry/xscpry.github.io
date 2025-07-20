@@ -54,7 +54,7 @@ html {
     align-items: center;
 }
 
-#aboutme, #services, #resume, #portfolio, #contact {
+#aboutme, #services, #resume, #portfolio {
   scroll-margin-top: 3rem;
 }
 
@@ -377,8 +377,7 @@ h1 {
 
 #contact{
     height: 100vh;
-    background-color: var(--clr-2);
-    color: var(--clr-1);
+    background-image: url('../img/hero-landing.jpg');
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -418,9 +417,9 @@ h1 {
 }
 
 .footer-links a {
-    margin-right: 1rem;
+    margin-right: .75rem;
     align-items: center;
-    color: var(--clr-1);
+    color: rgb(26, 26, 26);
     text-decoration: none;
     overflow: hidden;
 }
