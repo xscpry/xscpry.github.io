@@ -94,16 +94,24 @@ html {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.downloadcv-btn {
+.downloadcv-btn, #submit-btn-1 {
+    display: inline-block; 
     background-color: var(--clr-2);
     color: var(--clr-1);
     padding: 0.5rem 1.5rem;
     border-radius: 2rem;
     text-decoration: none;
     box-shadow: 2px 4px 0 2px var(--clr-3);
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    border: none;
 }
 
-.downloadcv-btn:hover {
+#submit-btn-1 {
+    width: 28%;
+}
+
+.downloadcv-btn:hover, #submit-btn-1:hover {
     background-color: var(--clr-5);
     color: var(--clr-1);
 }
@@ -425,11 +433,6 @@ h1 {
 }
 
 /* contact JS stuff */
-
-#submit-btn-1 {
-  transition: all 0.3s ease;
-}
-
 /* loading spinner */
 .fa-spinner {
   margin-left: 8px;
