@@ -312,16 +312,39 @@ h1 {
 }
 
 .projects {
-    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem 0;;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
+}
+
+.project-desc {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0 0;
+    align-items: center;
+}
+
+.project-desc p {
+    margin: 0;
+}
+
+.project-desc a {
+  color: #3182ce;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 .projects img {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
+    width: 100%;
 }
 
 .demo {
@@ -348,7 +371,6 @@ h1 {
 }
 
 .project-link {
-  display: inline-block;
   margin-top: .5rem;
   color: #3182ce;
   font-weight: 500;
@@ -365,7 +387,7 @@ h1 {
   transition: color 0.2s;
 }
 
-.project-link:hover {
+.project-link:hover, .project-desc a:hover {
   color: #2c5282;
   text-decoration: underline;
 }
@@ -378,6 +400,8 @@ h1 {
     align-content: center;
     justify-content: center;
     color: var(--clr-2);
+    border-top-left-radius: 12%;
+    border-top-right-radius: 12%;
     background-color: #ffffff;
     background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%23ffcbcb' fill-opacity='0.91' fill-rule='evenodd'/%3E%3C/svg%3E");
 }

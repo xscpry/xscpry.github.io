@@ -13,8 +13,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   emailjs.send("service_4hv1hnq", "template_48z1w1j", {
     name: document.getElementById('name').value,
     email: document.getElementById('email').value,
-    message: document.getElementById('message').value,
-    logo_url: "https://imgur.com/a/nFxxjgI" // direct link to logo
+    message: document.getElementById('message').value
   })
   .then(function() {
     alert('Message sent successfully!');
